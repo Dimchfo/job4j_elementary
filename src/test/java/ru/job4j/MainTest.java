@@ -1,14 +1,13 @@
 package ru.job4j;
 
-import org.junit.Test;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.*;
 
 public class MainTest {
     @Test
     public void whenActionThenResult() {
         int excepted = 1;
         int result = 1;
-        assertThat(result, is(excepted));
+        assertThat(result).isEqualTo(excepted);
     }
 }
